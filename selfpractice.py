@@ -255,3 +255,43 @@
 
 # list1.insert(0,"hello wolrd")   #To insert a new list item, without replacing any of the existing values, we can use the insert() method. 
 # print (list1)
+
+# add list items
+# list1.append("juice")
+# list1.insert(0, "yello")
+# list1.extend(list2)         #The extend() method does not have to append lists, you can add any iterable object (tuples, sets, dictionaries etc.).
+
+# print(list1)
+
+
+#remove items 
+# list1.remove("banana")
+# list1.pop(1)
+# del list1 [3]
+# del list1             #this will cause an error because you have succsesfully deleted "thislist".
+# list1.clear()         #The list still remains, but it has no content.
+
+# print(list1)
+
+
+
+#Loop Through a List
+thislist = ["apple", "banana", "cherry"]
+x = 0
+# for x in thislist:
+#     print (thislist)
+#     print (x)
+
+# for x in range(len(thislist)):
+#     print (thislist[x])
+
+# while x < len(thislist):
+#     print (thislist[x])
+#     x += 1 
+
+# [print (x) for x in thislist]
+
+
+fruits = ['apple', 'banana', 'cherry']
+newlist = ['apple' for x in fruits]
+print (newlist)
