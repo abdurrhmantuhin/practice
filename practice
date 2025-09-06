@@ -1,97 +1,97 @@
-# 1 numeric type data
+# # 1 numeric type data
 
-str = "its string type of data"
-print  (str)
-print (type(str))
+# str = "its string type of data"
+# print  (str)
+# print (type(str))
 
-# 2 int type data. int type data only support number
-int = 50
-print(int)
-print(type(int))
+# # 2 int type data. int type data only support number
+# int = 50
+# print(int)
+# print(type(int))
 
-# 3 floting type data. float type data support only "."
-floating = 50.90
-print(floating)
-print(type(floating))
+# # 3 floting type data. float type data support only "."
+# floating = 50.90
+# print(floating)
+# print(type(floating))
 
-# 4 complex type date. complex typa data only support in j like = 500j or 300j etc
-complex = 500j
-print(complex)
-print(type(complex))
-
-
-
-# string type data
-
-# 5 string type data only support Single Quote or Double Quote
-str = "its string type of data"
-print  (str)
-print (type(str))
-
-# 6 its single type of string
-string = "hello"
-print (string)
-print(type(string))
-
-# 7 now we write multiple type strings
-welcome = 'hey '
-user_name = "tuhin"
-print(welcome+' ' +user_name+" "+ 'welcome back home' )
-print(type(welcome+' ' +user_name+" "+ 'welcome back home'))
+# # 4 complex type date. complex typa data only support in j like = 500j or 300j etc
+# complex = 500j
+# print(complex)
+# print(type(complex))
 
 
 
-# 8 booleans data type
-bool = True
-print (bool)
-print(type(bool))
-bools = False
-print (bools)
-print(type(bools))
+# # string type data
 
-# 9 live example
-x = 30
-y = -40
-print(x<y)
-print(x>y)
+# # 5 string type data only support Single Quote or Double Quote
+# str = "its string type of data"
+# print  (str)
+# print (type(str))
 
-a = 1
-b= 1
-print(a==b)
+# # 6 its single type of string
+# string = "hello"
+# print (string)
+# print(type(string))
 
-
-
-# 10 python string format ()method
-p = 70
-l = 33
-print(f"your current balance is {p+l}")
-print(f"your current is", p+l) 
-
-# 11 binary type data
-
-#-bytes
-list = [1,2,3,4,5]
-b = bytes(list)
-print(type(b))
-
-# 12 bytearray
-listes = [1,2,3,4,5]
-d = bytearray(listes)
-print(type(d))
+# # 7 now we write multiple type strings
+# welcome = 'hey '
+# user_name = "tuhin"
+# print(welcome+' ' +user_name+" "+ 'welcome back home' )
+# print(type(welcome+' ' +user_name+" "+ 'welcome back home'))
 
 
 
-# 13 none type data
-none = None
-print(none)
-print(type(none))
+# # 8 booleans data type
+# bool = True
+# print (bool)
+# print(type(bool))
+# bools = False
+# print (bools)
+# print(type(bools))
+
+# # 9 live example
+# x = 30
+# y = -40
+# print(x<y)
+# print(x>y)
+
+# a = 1
+# b= 1
+# print(a==b)
 
 
 
-# 14 list type data
-pp = ['arny','tuhin','ayra','abdur','rhman']
-pp[1] = 'ayra'
-print(pp)
+# # 10 python string format ()method
+# p = 70
+# l = 33
+# print(f"your current balance is {p+l}")
+# print(f"your current is", p+l) 
+
+# # 11 binary type data
+
+# #-bytes
+# list = [1,2,3,4,5]
+# b = bytes(list)
+# print(type(b))
+
+# # 12 bytearray
+# listes = [1,2,3,4,5]
+# d = bytearray(listes)
+# print(type(d))
+
+
+
+# # 13 none type data
+# none = None
+# print(none)
+# print(type(none))
+
+
+
+# # 14 list type data
+# pp = ['arny','tuhin','ayra','abdur','rhman']
+# pp[1] = 'ayra'
+# print(pp)
 
 
 
@@ -102,8 +102,9 @@ print(type(tup))
 
 
 
-# 16 range type date
-ran = range(10)
-for i in ran:
-    print(i)
+# # 16 range type date
+# ran = range(10)
+# for i in ran:
+#     print(i)
+
 
