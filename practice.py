@@ -95,10 +95,10 @@
 
 
 
-# 15 tuple type date
-tup = (1,2,3,4,5)
-print(tup)
-print(type(tup))
+# # 15 tuple type date
+# tup = (1,2,3,4,5)
+# print(tup)
+# print(type(tup))
 
 
 
@@ -106,5 +106,3 @@ print(type(tup))
 # ran = range(10)
 # for i in ran:
 #     print(i)
-
-
