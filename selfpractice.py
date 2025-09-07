@@ -415,3 +415,34 @@
 # y = fruits.count("banana")                                             # Searches the tuple for a specified value and returns the position of where it was found
 
 # print (y)
+
+
+
+# #set type 
+# fruits = {1,2,3,4,5,6,7,8,26,"apple","banana","cherry","orange","papapya","papapya","orange",False}
+# print(len(fruits))
+
+# for x in fruits:
+#     print (x)
+
+# print(1 in fruits)              # and only True and False 
+
+
+
+# #Add Set Items
+# set1 = {1,2,3,4,5,10}
+# set2 = [6,7,8,9,10]
+
+# set1.add(6)
+# print(set1)
+
+# set1.update(set2)
+# print (set1)
+
+# set1.remove(3)
+# set1.discard(10)                           # If the item to remove does not exist, discard() will NOT raise an error.
+# set1.pop()
+# set1.clear()
+
+# print (set1)
+
