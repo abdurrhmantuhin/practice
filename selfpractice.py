@@ -325,8 +325,30 @@
 
 
 
-# Join Two Lists
-num1 = [1,2,3,4,5,]
-num = [6,7,8,9,10]
-num1.extend(num)
-print (num1)
+# # Join Two Lists
+# num1 = [1,2,3,4,5,]
+# num = [6,7,8,9,10]
+# num1.extend(num)
+# print (num1)
+
+
+# # #matrix
+# num = [
+#     [1,2,3,4,5,6],
+#     [7,8,9,10,11],
+#     1233 ,
+#     ["banana","apple","juice","mango"]
+# ]
+
+# print(num[3][3])
+
+
+
+# Tuples
+# num = (1,2,3,4,5,6,7,8,9,10)
+
+# num[2] = 23                    # A tuple is a collection which is ordered and unchangeable.
+# print(num)
+# print(num[2])                  # Negative Indexing
+
+# print(num[2:3])                  # Range of Indexes
