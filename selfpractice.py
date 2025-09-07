@@ -439,6 +439,8 @@
 # set1.update(set2)
 # print (set1)
 
+
+# #remove set items 
 # set1.remove(3)
 # set1.discard(10)                           # If the item to remove does not exist, discard() will NOT raise an error.
 # set1.pop()
@@ -446,3 +448,16 @@
 
 # print (set1)
 
+
+# #loop set
+# set1 = {1,2,3,4,5,10}
+# for x in set1 :
+#     print(x)
+
+# #set join
+# set1 = {1,2,3,4,5}
+# set2 = {6,7,8,"nb"}
+
+# # set3 = set1.union(set2)
+# set1.update(set2)
+# print(set1)
