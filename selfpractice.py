@@ -344,7 +344,7 @@
 
 
 
-# Tuples
+# #Tuples
 # num = (1,2,3,4,5,6,7,8,9,10)
 
 # num[2] = 23                    # A tuple is a collection which is ordered and unchangeable.
@@ -352,3 +352,66 @@
 # print(num[2])                  # Negative Indexing
 
 # print(num[2:3])                  # Range of Indexes
+
+
+
+# # Python - Update Tuples
+# eng = ("apple","banana","papaya")
+
+# x = list(eng)                              # there is a workaround. You can convert the tuple into a list, change the list, and convert the list back into a tuple.
+# x.append("orange")
+# eng = tuple(x)
+# print (eng)
+
+# x = ("cherry",)
+# eng += x                    # allowed to add tuples to tuples
+# print (eng)
+
+# #Unpack Tuples
+# fruits = ("apple", "banana", "cherry","papaya","oange")
+# (*x,y,z) = fruits
+# print(x)                                #  we are also allowed to extract the values back into variables. This is called "unpacking"
+# (x,*z) = fruits
+# print (z)
+# (x,*y,z)= fruits
+# print (y)
+
+
+
+# # Loop Tuples
+# fruits = ("apple", "banana", "cherry","papaya","oange")
+
+
+# for x in fruits :
+#     print(x)
+
+
+# for i in range(len(fruits)):
+#     print (fruits[i])
+
+# x = 0 
+
+# while x < len(fruits):
+#     print(fruits[x])
+#     x += 1
+
+
+
+# # Join Tuples
+# num = (1,2,3,4,5,67,8)
+# # num1 = (1,2,3,4,5,67,8)
+# num2 = num * 2
+# print (num2)
+# print(num+num1)
+
+
+
+# Tuple Methods
+# fruits = ("apple", "banana", "cherry","papaya","orange", "banana")
+
+# x = fruits.index("orange")                                              # Returns the number of times a specified value occurs in a tuple
+# print(x)
+
+# y = fruits.count("banana")                                             # Searches the tuple for a specified value and returns the position of where it was found
+
+# print (y)
