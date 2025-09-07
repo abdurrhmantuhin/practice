@@ -139,7 +139,7 @@
 
 
 
-# String Format
+# #String Format
 # l = str(input("enter your name:" ))
 # L = int(input("enter your age :"))
 # name = l
@@ -149,7 +149,7 @@
 
 
 
-# Boolean Values
+# #Boolean Values
 # a = int(input("enter your fast number: "))
 # b = int(input("enter your second number: "))
 # x = ( a < b )
@@ -163,7 +163,7 @@
 
 
 
-# Python Operators
+# #Python Operators
 
 # m = 50
 # n = 10
@@ -205,7 +205,7 @@
 
 
 
-# Python Logical Operators
+# #Python Logical Operators
 # x = 5
 # y = 7
 
@@ -228,7 +228,7 @@
 
 
 
-# Python Lists
+# #Python Lists
 # list1 = ["banana","apple","orange","junkfrut","papaya"]
 # list2 = [1, 5, 7, 9, 3]
 # list3 = [True, False, False]
@@ -236,7 +236,7 @@
 # print (list1)
 # print(len(list1))
 
-# Python - Access List Items
+# #Python - Access List Items
 # print(list1[1])
 # print(list1[-1])
 # print(list1[0:4])
@@ -256,7 +256,7 @@
 # list1.insert(0,"hello wolrd")   #To insert a new list item, without replacing any of the existing values, we can use the insert() method. 
 # print (list1)
 
-# add list items
+# #add list items
 # list1.append("juice")
 # list1.insert(0, "yello")
 # list1.extend(list2)         #The extend() method does not have to append lists, you can add any iterable object (tuples, sets, dictionaries etc.).
@@ -264,7 +264,7 @@
 # print(list1)
 
 
-#remove items 
+# #remove items 
 # list1.remove("banana")
 # list1.pop(1)
 # del list1 [3]
@@ -275,9 +275,9 @@
 
 
 
-#Loop Through a List
-thislist = ["apple", "banana", "cherry"]
-x = 0
+# #Loop Through a List
+# thislist = ["apple", "banana", "cherry"]
+# x = 0
 # for x in thislist:
 #     print (thislist)
 #     print (x)
@@ -292,6 +292,41 @@ x = 0
 # [print (x) for x in thislist]
 
 
-fruits = ['apple', 'banana', 'cherry']
-newlist = ['apple' for x in fruits]
-print (newlist)
+
+# #List Comprehension
+# number = [1,2,3,4,5,]
+# double = [i**3 for i in number]
+# print (double)
+
+
+
+# #Sort Lists
+# num1 = [3,65,8,32,54,21,5,4,6,531,745]
+# num2 = ["c","s","f","e","q","t","i","o","p","m","j","h","g","w"]
+
+# num2.sort()
+# print (num2)
+
+# num1.sort()
+# print (num1)
+
+
+# #reverse
+# num = [1,2,3,4,5,6,7,8]
+# num.sort(reverse = True)
+# print (num) 
+
+
+
+# #Copy Lists
+# num = [1,2,3,4,5,6,7,8,9,10]
+# num2 = num.copy()
+# print (num2)
+
+
+
+# Join Two Lists
+num1 = [1,2,3,4,5,]
+num = [6,7,8,9,10]
+num1.extend(num)
+print (num1)
