@@ -19,7 +19,7 @@ is_student = input("Are you a student? (yes or no): ").lower() == "yes"
 
 lucky_number = complex(input("Enter your lucky number (can be complex like 5 + 3j): "))
 
-
+print("=" * 40 )
 print("\n🔍 data type analysis:")
 print("-" * 30 )
 print(f"Name  type: {type(name)}")
@@ -29,7 +29,7 @@ print(f"Student status type: {type(is_student)}")
 print(f"Lucky number type: {type(lucky_number)}")
 
 print ("\n🧮 Calculations and Analysis: ")
-print("=" * 40 )
+print("-" * 40 )
 
 current_year = datetime.datetime.now().year
 calculated_age = current_year - birth_year
@@ -113,7 +113,7 @@ print(f"🍀 Lucky Number: {summary_lucky} (type:{type(summary_lucky).__name__} 
 
 APP_NAME = "Personal info Manager"
 VERSION = "1.0"
-AUTHOR = "YOUR NAME"
+AUTHOR = "TUHIN"
 
 def display_app_info():
     """function to demonstrate gloabal variable usage """
@@ -123,3 +123,56 @@ def display_app_info():
     print(f"Version: {VERSION}")
     print(f"Author: {AUTHOR}")
 display_app_info()
+
+
+
+print(f"\n🔄 Type Conversion Examples:")
+print("-" * 35)
+
+age_str = str(age)
+age_float = float(age)
+age_bool = bool(age)
+
+print(f"Age as str : '{age_str}' (type: {type(age_str).__name__})")
+print(f"Age as float : '{age_float}' (type: {type(age_float).__name__})")
+print(f"Age as bool : '{age_bool}' (type: {type(age_bool).__name__})")
+
+print(f"\n🎉 Final Report Card for {name}")
+print("=" * 50)
+
+
+report_line1 = f"Name: {name} | Age: {age} | Category: {age_category}"
+report_line2 = f"Height: {height}cm | Weight: {weight}kg | BMI: {bmi:.1f}"
+report_line3 = f"Student {'Yes' if is_student else 'NO'} | Lucky number:{lucky_number}"
+
+
+print(f"📄 {report_line1}")
+print(f"📄 {report_line2}")
+print(f"📄 {report_line3}")
+
+health_score = 0 
+if is_normal:
+    health_score += 50
+if is_adult:
+    health_score += 20 
+    if not is_senior or age < 55:
+        health_score += 20
+health_score += min(10, age // 10 ) 
+
+print(f"🏆 Health Score: {health_score}/100")
+print(f"✅ Project Completed Successfully!")
+print(f"📚 Concepts Learned: Variables, Data Types, String Formatting, Type Conversion, Boolean Logic")
+
+
+def save_profile ():
+    """Save profile to a text file"""
+    filename = f"{name.replace(' ', '_')}_profile.txt"
+
+    with open (filename,'w') as file :
+        file.write(f"Personal Profile: {name}")
+        file.write(f"Age: {age}\n")
+        file.write(f"BMI: {bmi:.2f}\n")
+        file.write(f"Category: {age_category}\n")
+        file.write(f"Health Score: {health_score}/100\n")
+
+    print(f"💾 Profile saved to {filename}") 

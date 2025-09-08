@@ -1,4 +1,4 @@
-##Creating Variables
+# #Creating Variables
 # y = "tuhin"
 # x = 18
 
@@ -6,7 +6,7 @@
 
 
 
-##Casting
+# #Casting
 # x = str(2)
 # y = int(762)
 # z = float(82)
@@ -15,7 +15,7 @@
 
 
 
-## Get the Type
+# # Get the Type
 # x = "string"
 # y = '8'
 # z = 423
@@ -28,7 +28,7 @@
 
 
 
-## Many Values to Multiple Variables
+# # Many Values to Multiple Variables
 # x,y,z = 12, "tuhin" , 6734.83
 
 # print (x,y,z)
@@ -38,7 +38,7 @@
 
 
 
-## One Value to Multiple Variables
+# # One Value to Multiple Variables
 # x = y = z = 9000
 # print(y)
 
@@ -54,7 +54,7 @@
 
 
 
-## Global Variables
+# # Global Variables
 # x = "arny"
 # def variable ():
 #     print("my ex name " , x )
@@ -63,7 +63,7 @@
 
 
 
-## glabal function 
+# # glabal function 
 # x = 100 
 # def variable ():
 #     global x 
@@ -74,7 +74,7 @@
 
 
 
-## Built-in Data Types
+# # Built-in Data Types
 
 # # str
 # a = "tuhin"
