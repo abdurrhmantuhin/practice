@@ -1,17 +1,4 @@
 import datetime
-APP_NAME = "Personal Info Manager"
-VERSION = "1.0"
-AUTHOR = "Your Name"
-
-def display_app_info():
-    """Function to demonstrate global variable usage"""
-    global APP_NAME, VERSION, AUTHOR
-    print(f"\n🔧 Application Info:")
-    print(f"App: {APP_NAME}")
-    print(f"Version: {VERSION}")
-    print(f"Author: {AUTHOR}")
-
-
 
 print("Welcome to personal information manger!")
 print("=" * 39)
@@ -36,7 +23,7 @@ print(f"your city: {city} and data type : {type(city)}")
 print ("=" * 27)
 print (f"Calculations and Processing")
 print ("=" * 27)
-
+print("prossesing please wait...")
 
 adult = age >= 18
 teenager = 13 <= age <= 19
@@ -67,3 +54,16 @@ else:
 print(f"\n📋 Complete Data Summary:")
 print("=" * 40)
 
+APP_NAME = "Personal Info Manager"
+VERSION = "2.9"
+AUTHOR = "TUHIN"
+
+def display_app_info():
+    """Function to demonstrate global variable usage"""
+    global APP_NAME, VERSION, AUTHOR
+    print(f"\n🔧 Application Info:")
+    print(f"App: {APP_NAME}")
+    print(f"Version: {VERSION}")
+    print(f"Author: {AUTHOR}")
+
+display_app_info()
