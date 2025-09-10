@@ -116,3 +116,83 @@ for category_data in complete_menu:
     for i in range(len(items)):
         print(f"  {i+1}. {items[i]:<20} - ${prices[i]:>6.2f}")
 
+print("\n📈 Menu Statistics:")
+print("=" * 25)
+
+total_price = len(appetizers) + len(main_courses) + len(desserts) + len(beverages)
+all_price = appetizer_prices + main_course_prices + dessert_prices + beverage_prices
+
+print(f"📊 Total menu items: {total_price}")
+print(f"💰 Average price: $ {sum(all_price) / len(all_price):.2f}")
+print(f"💎 Most expensive: ${max(all_price):.3f}")
+print(f"💵 Cheapest: $ {min(all_price):.2f}")
+
+
+category_stats = []
+for category_data in complete_menu:
+    category_name , items ,  prices = category_data
+    avg_price = sum(prices) / len (prices)
+    category_stats.append([category_name, len(items) , avg_price])
+
+
+print(f"\n📋 Category Breakdown:")
+for stat in category_stats:
+    name, count, avg = stat 
+    print(f"{name:<15}:{count:>2} items , avg ${avg:>6.2f}")
+
+
+
+
+def search_menu (keyword):
+    """Search for items containg keywords"""
+    results = []
+
+
+    all_items = appetizers + main_courses + desserts + beverages
+    all_categories = (["Appetizers"] * len(appetizers)+
+                      ["main courses"] * len(main_courses) +
+                      ["deserts"] * (desserts) +
+                      ["beverages"] * (beverages))
+    
+
+    for i, item in enumerate(all_items):
+        if keyword.lower() in item.lower():
+            results.append(f"{item} ({all_categories[i]})")
+    
+
+    return results
+
+def calculate_order_total(order_items):
+    total = 0.0
+    item_details = []
+
+
+    all_items = appetizers + main_courses + desserts + beverages
+    all_prices = appetizer_prices + main_course_prices + dessert_prices + beverage_prices
+    items_price_dict = dict(zip(all_items , all_prices))
+
+    for item in order_items:
+        if item in items_price_dict:
+            price = items_price_dict[item]
+            total += price 
+            item_details.append(f"{items}:${price:.2f}")
+        else:
+            item_details.append(f"{item}: item not found")
+        
+
+    return total, item_details
+
+def get_daily_special():
+    all_items = appetizers + main_courses + desserts + beverages
+    all_prices = appetizer_prices + main_course_prices + dessert_prices + beverage_prices
+
+    special_indices = random.sample(range(len(all_items)), min(3, len(all_items)))
+    specials = []
+    for i in special_indices:
+        original_price = all_prices[i]
+        discounted_price = original_price * 0.85
+        specials.append([all_items[i], original_price, discounted_price])
+
+    return specials
+
+
