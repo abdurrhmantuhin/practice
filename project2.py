@@ -151,8 +151,8 @@ def search_menu (keyword):
     all_items = appetizers + main_courses + desserts + beverages
     all_categories = (["Appetizers"] * len(appetizers)+
                       ["main courses"] * len(main_courses) +
-                      ["deserts"] * (desserts) +
-                      ["beverages"] * (beverages))
+                      ["deserts"] * len(desserts) +
+                      ["beverages"] * len(beverages))
     
 
     for i, item in enumerate(all_items):
@@ -196,3 +196,59 @@ def get_daily_special():
     return specials
 
 
+print("\n🔍 Menu Operations Demo:")
+print("=" * 35)
+
+search_result =  search_menu("chicken")
+print(f"🔍 Search for 'chicken': {search_result}")
+
+sample_order = ["Checken Wings", "Beef Steak", "Coffee"]
+order_total, order_details = calculate_order_total(sample_order)
+print(f"\n🧾 Sample Order:")
+for detail in order_details:
+    print(f"  {detail}")
+print(f"  total: ${order_total:.2f}")
+
+
+daily_specials = get_daily_special()
+print(f"\n⭐ Today's Specials:")
+for special in daily_specials:
+    item, original, discounted = special
+    savings = original - discounted
+    print(f"      {item}: ${original:.2f} → ${discounted:.2f}(save ${savings:.2f})")
+
+
+
+print("\n📊 Menu Sorting Options:")
+print("-" * 30)
+
+# Sort by price (create sorted versions without modifying originals)
+sorted_mains_by_price = sorted(zip(main_courses, main_course_prices), key=lambda x: x[1])
+sorted_desserts_alphabetical = sorted(desserts)
+
+print("💰 Main courses by price (low to high):")
+for item, price in sorted_mains_by_price:
+    print(f"   {item}: ${price:.2f}")
+
+print(f"\n🔤 Desserts alphabetically: {sorted_desserts_alphabetical}")
+
+# Reverse sorting
+expensive_first = sorted(zip(appetizers, appetizer_prices), key=lambda x: x[1], reverse=True)
+print(f"\n💎 Appetizers by price (high to low):")
+for item, price in expensive_first:
+    print(f"   {item}: ${price:.2f}")
+    
+
+
+print("\n🚀 Advanced List Features:")
+print("=" * 30)
+
+original_menu = main_courses.copy()
+modified_menu = main_courses[:]
+
+modified_menu.append("new fusion dish")
+modified_menu.sort()
+
+print(f"Original menu length: {len(original_menu)}")
+print(f"Modified menu length: {len(modified_menu)}")
+print(f"Lists are different: {original_menu != modified_menu}")
