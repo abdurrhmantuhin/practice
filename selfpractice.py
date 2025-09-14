@@ -517,22 +517,3 @@
 
 # y = dict(thisdict)
 # print(y)
-
-
-
-dict = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964,
-  "year" : 2002,
-
-  "buyer" : "tuhin"
-}
-
-x = dict.values()
-y = dict.keys()
-z = dict.items()
-
-print(x)
-print(y)
-print(z)
