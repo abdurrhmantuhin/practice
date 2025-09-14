@@ -461,3 +461,78 @@
 # # set3 = set1.union(set2)
 # set1.update(set2)
 # print(set1)
+
+
+# #Python Dictionaries
+
+# thisdict = {
+#   "brand": "Ford",
+#   "model": "Mustang",
+#   "year": 1964,
+#   "year" : 2002,
+
+#   "name" :{
+#       "tuhin","abdur","rhman","ifti","sayek"
+#       }
+# }
+
+# #Access Dictionary Items
+# x = thisdict.get ("name")
+# x = thisdict.keys()
+# x = thisdict.values()
+# x = thisdict.items()
+
+
+# #Change Dictionary Items & Add Dictionary Items
+# thisdict["year"] = 200343
+# thisdict.update({"year" : 2003})
+# thisdict["color"]= 2323
+# thisdict.update({"col" : 000})
+
+
+# #remove items
+# thisdict.pop("model")
+# thisdict.popitem()
+# del thisdict
+# thisdict.clear()
+
+
+# #Loop Dictionaries
+# for x in thisdict:
+#   print (x)
+
+# for a in thisdict.values():
+#   print(a)
+
+# for b in thisdict.keys():
+#     print(b)
+
+# for x,y in thisdict.items():
+#     print(x,y)
+
+
+# #Copy Dictionaries
+# x = thisdict.copy()
+# print(x)
+
+# y = dict(thisdict)
+# print(y)
+
+
+
+dict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964,
+  "year" : 2002,
+
+  "buyer" : "tuhin"
+}
+
+x = dict.values()
+y = dict.keys()
+z = dict.items()
+
+print(x)
+print(y)
+print(z)
