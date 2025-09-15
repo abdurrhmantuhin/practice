@@ -304,3 +304,9 @@ print(f"    📅 Final connections: {growth_data[-1]}")
 print(f"    📈 Net growth: {growth_data[-1] - growth_data[0]}")
 print(f"    📊 Growth rate: {((growth_data[-1] / growth_data[0]) - 1) * 100:.1f}%")
 
+milestones = [7,14,21,30]
+print(f"\n🎯 Growth Milestones:")
+for day in milestones:
+    if day < len(growth_data):
+        print(F"    Day{day:2d}: {growth_data[day]} connections")
+        
