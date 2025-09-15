@@ -158,7 +158,7 @@ def analyze_social_circles():
 
     return analysis, all_people
 
-social_analysis, all_contacts = analyze_social_circles()
+social_analysis, all_connections = analyze_social_circles()
 
 print(f"📊 Social Network Statistics:")
 print(f"   🌐 Total unique connections: {social_analysis['total_connections']}")
@@ -170,3 +170,73 @@ for circle1, overlaps in social_analysis['social_overlap'].items():
         if count > 0:
             print(f"   {circle1} ↔ {circle2}: {count} mutual connections")
 
+
+
+print("\n⚡ Set Comprehension Examples:")
+print("-" * 34)
+
+short_names = {name for name in your_friends if len(name) <= 5}
+long_name =  {name for name in your_friends if len(name) > 5}
+
+print(f"📝 Short names (≤5 chars): {short_names}")
+print(f"📝 Long names (>5 chars): {long_name}")
+
+vowel_names = {name for name in all_connections if name[0].upper() in 'AEIOU'}
+consonant_names = {name for name in all_connections if name[0].upper() not in 'AEIOU'}
+
+print(f"🔤 Names starting with vowels: {vowel_names}")
+print(f"🔤 Names starting with consonants: {len(consonant_names)} names")
+
+gaming_usernames = {name for name in gaming_friends if not name.isalpha()}
+print(f"🎮 Gaming usernames: {gaming_usernames}")
+
+
+
+print("\n🤖 Smart Friend Recommendations:")
+print("-" * 38)
+
+
+def recommend_friends():
+    potential_friends = set()
+    friend_networks = {
+            "Ahmed": {"Ali", "Sara", "Omar", "Maya"},
+        "Fatima": {"Layla", "Noor", "Hassan", "Zara"},
+        "Omar": {"Ahmed", "John", "Lisa", "Mike"},
+        "Hassan": {"Fatima", "Ali", "Cousin Ahmad"},
+        "Karim": {"Alex", "Maya", "Sophie", "Daniel"}
+ }
+
+    recommendations = {}
+
+    for friend in your_friends:
+        if friend in friend_networks:
+            friend_of_friends = friend_networks[friend] - your_friends - {friend}
+            for potential in friend_of_friends:
+                if potential not in recommendations:
+                    recommendations[potential] = []
+            recommendations[potential].append(friend)
+    return recommendations
+
+friend_recommendations = recommend_friends()
+
+print("💡 People you might know:")
+for person, mutual_friends in friend_recommendations.items():
+    print(f"   👤 {person} (through: {', '.join(mutual_friends)})")
+
+
+print("\n👥 Group Management:")
+print("-" * 25)
+
+birthday_party_invites = your_friends | your_family
+work_party_invites = work_colleagues | {name for name in your_friends if name in work_colleagues}
+study_group = university_friends & your_friends
+gaming_tournament = gaming_friends - {"GamerX"}
+
+print(f"🎂 Birthday party invites: {len(birthday_party_invites)} people")
+print(f"💼 Work party invites: {len(work_party_invites)} people")
+print(f"📚 Study group: {study_group}")
+print(f"🏆 Gaming tournament players: {len(gaming_tournament)} people")
+
+birthday_work_conflict = birthday_party_invites & work_party_invites
+if birthday_work_conflict:
+    print(f"⚠️  People invited to both events: {birthday_work_conflict}")
