@@ -240,3 +240,67 @@ print(f"🏆 Gaming tournament players: {len(gaming_tournament)} people")
 birthday_work_conflict = birthday_party_invites & work_party_invites
 if birthday_work_conflict:
     print(f"⚠️  People invited to both events: {birthday_work_conflict}")
+
+
+print("\n🔒 Privacy Management:")
+print("-" * 25)
+
+public_profile_viewers = all_connections
+close_friends_only = your_friends & your_family
+blocked_users = {"SpamUser", "ToxicPlayer", "Stranger123"}
+
+def check_content_visibility(viewer,content_type):
+    privacy_settings = {
+        'posts': your_friends | work_colleagues,
+        'photos': your_friends,
+        'personal_info': your_friends & your_family,
+        'location': your_friends - work_colleagues
+    }
+
+    if viewer in blocked_users:
+        return False
+    return viewer in privacy_settings.get(content_type, set())
+
+test_viewers = ["Ahmed", "John", "SpamUser", "Hassan"]
+content_type = ["posts", "photos", "personal_info", "location"]
+
+print("🔍 Content Visibility Test:")
+for viewer in test_viewers:
+     print(f"   👤 {viewer}:")
+     for content in content_type:
+         can_view = check_content_visibility(viewer,content)
+         status = "✅" if can_view else "❌"
+         print(f"      {status} {content}")
+
+
+print("\n📈 Network Growth Simulation:")
+print("-" * 35)
+
+def simulate_network_growth(days=30):
+    initial_network = your_friends.copy()
+    growth_history = [len(initial_network)]
+
+    for day in range (1, days + 1 ):
+        if random.random() < 0.3:
+            new_connections = random.randint(1,3)
+            for _ in range(new_connections):
+                new_friend = f"NewFriend_{day}_{random.randint(1,100)}"
+                initial_network.add(new_friend)
+
+
+        if random.random() < 0.5 and len(initial_network) > 5:
+            lost_friend = random.choice(list(initial_network))
+            initial_network.discard(lost_friend)
+
+        growth_history.append(len(initial_network))
+
+    return growth_history, initial_network
+
+growth_data, final_network = simulate_network_growth(30)
+
+print(f"📊 Network Growth Over 30 Days:")
+print(f"    📅 Starting connections: {growth_data[0]}")
+print(f"    📅 Final connections: {growth_data[-1]}")
+print(f"    📈 Net growth: {growth_data[-1] - growth_data[0]}")
+print(f"    📊 Growth rate: {((growth_data[-1] / growth_data[0]) - 1) * 100:.1f}%")
+
