@@ -517,3 +517,342 @@
 
 # y = dict(thisdict)
 # print(y)
+
+
+
+
+# # Conditions and If ...... else
+# x = 200
+# y = 50
+
+# if x > y:
+#     print("'X' is bigger than 'Y'")
+# elif
+# else:
+#     print('"X" is not bigger than "Y"')
+
+
+
+# #Loops
+# x = 1
+
+# while x <= 10:
+#     print(f"{x}     Sorry baby")
+#     x += 1
+
+# fruits = ["apple", "banana", "cherry", "hello", "hi"]
+# for fruit in fruits:
+#     if fruit == "cherry":
+#         break
+#     print(fruit)
+
+
+
+
+# #Python Functions
+
+#Python built-in Functions
+#Python Recursion Functions
+#Python Lambda Functions
+#Python User-defined Functions
+
+# def plus(a,b):
+#     sum = a + b
+#     print(sum)
+# plus(1,2)
+
+# def minus(a,b):
+#     sum = a - b
+#     print(sum)
+# minus(23,32)
+
+
+
+#   #break
+# y = [1,2,3,4,5,6,7,8]
+# for x in y:
+#     if x == 3:
+#         continue
+#     print(x)
+
+
+
+# #Zip functions
+# z = ["tuhin", "abdur", "rhman"]
+# x = ["he is good", "he is bad", "he is the best"] 
+# y = list(zip(z,x))
+
+# for a in y:
+#     print(a)
+
+
+
+# #Lambda functions
+# x = lambda a,b,: (a+b)
+# print(x(120,2,))
+
+
+
+#recursive function
+# def tuhin(count=0):
+#     if count < 998:  
+#         print("love your")
+#         tuhin(count + 1)
+#     else:
+#         print("end!")
+
+# tuhin()
+
+
+# #Classes and Objects
+# class x:
+#     a = ""
+#     b = ""
+
+# y = x
+# z = x
+# y.a = "tuhin"
+# z.b = "01831127"
+# print(y.a)
+# print(z.b)
+
+
+
+# # Inheritance
+# class x:
+#     a = "1" 
+#     b = "2"
+#     c = "3"
+#     d = "4"
+#     e = "5"
+#     g = "6"
+
+# class y(x):
+#     a = "7" 
+#     b = "8"
+#     c = "9"
+#     d = "10"
+#     e = "11"
+#     f = "12"
+
+# a = y()
+# print(a.g)
+
+
+
+# #multiple inheritance
+# class x:
+#     a = "1" 
+#     b = "2"
+#     c = "3"
+#     d = "4"
+#     e = "5"
+#     g = "6"
+
+# class y:
+#     h = "7" 
+#     i = "8"
+#     j = "9"
+#     k = "10"
+#     l = "11"
+#     m = "12"
+
+# class z :
+#     n = "13"
+#     o = "14"
+#     p = "15"
+
+# class w(x,y,z):
+#     q = "16"
+#     r = "17"
+#     s = "18"
+
+# w = w
+# print(w.b)
+
+
+
+# #multilavel inheritance
+# class x:
+#     a = "1" 
+#     b = "2"
+#     c = "3"
+#     d = "4"
+#     e = "5"
+#     g = "6"
+
+# class y(x):
+#     h = "7" 
+#     i = "8"
+#     j = "9"
+#     k = "10"
+#     l = "11"
+#     m = "12"
+
+# class z (y):
+#     n = "13"
+#     o = "14"
+#     p = "15"
+
+# class w(z):
+#     q = "16"
+#     r = "17"
+#     s = "18"
+
+# xx = w
+# print(xx.b)
+
+
+
+
+# #iterator
+# list = [1,2,3,4,"da","sda","sdada"]
+# for i in list:
+#     print(i)
+# z = iter(list)
+# print(next(z))
+
+
+
+# #scope
+# x = 20      #global scop
+# y = 41
+
+# def x():
+#     x = 1000 # local scop
+#     print(x)
+
+# x()
+
+
+
+# def y():
+#     global x
+#     x = 1000
+#     print(x)
+# y()
+
+
+
+# #Datetime
+# import datetime
+# a = datetime.datetime.now()
+# print(a.strftime("%a"))
+# print(a.strftime("%A"))
+# print(a.strftime("%w"))
+# print(a.strftime("%d"))
+# print(a.strftime("%b"))
+# print(a.strftime("%B"))
+# print(a.strftime("%m"))
+# print(a.strftime("%y"))
+# print(a.strftime("%Y"))
+# print(a.strftime("%H"))
+# print(a.strftime("%I"))
+# print(a.strftime("%p"))
+# print(a.strftime("%M"))
+# print(a.strftime("%S"))
+# print(a.strftime("%f"))
+# print(a.strftime("%Z"))
+# print(a.strftime("%z"))
+# print(a.strftime("%j"))
+# print(a.strftime("%U"))
+# print(a.strftime("%W"))
+# print(a.strftime("%C"))
+# print(a.strftime("%x"))
+# print(a.strftime("%X"))
+# print(a.strftime("%%"))
+# print(a.strftime("%G"))
+# print(a.strftime("%u"))
+# print(a.strftime("%V"))
+
+
+
+# #Math
+# x = [-12,34,5464,5753,534,543,64,75,353,35,6]
+# print(min(x))
+# print(max(x))
+
+# x = abs(-11111)
+# print(x)
+
+# x = pow(2,34)
+# print(x)
+
+
+
+# #RegEx
+# import re
+# y = "The Rain is Spain"
+
+# a = re.findall("[a-z]",y)
+# print(a) 
+
+# x = " hello world, i meet my self"
+
+# pattern = "[a-z]"
+# b = re.findall(pattern,x)
+# print(b)
+
+# z = "as hello world its me tuhin!!!"
+# pattern = "^hello"
+# a = re.findall(pattern,z)
+
+# if a:
+#     print("yes hello is exsit")
+# else:
+#     print("no longer hello")
+
+
+
+
+# # Try Except
+# try:
+#   print(x)
+# except:
+#   print("An exception occurred")
+
+# try:
+#   print("Hello")
+# except:
+#   print("Something went wrong")
+# else:
+#   print("Nothing went wrong")
+
+
+
+
+# #File Open
+# o = open("practice.text", "r")
+# print(o.read())
+
+
+
+
+# #File Write
+# o = open("practice.text","a")
+# o.write("<p>hey! </p>")
+
+# o = open("practice.text","a")
+# o.write("<p>hey! </p>")
+
+
+
+
+# #delete a file
+# import os
+# # os.remove("practice.text")
+# os.rmdir("hello")
+
+
+
+
+# #import module
+# import practice
+# practice.hello()
+
+# import practice as hey
+# hey.hello()
+
+# from practice import hello
+# hello()
+
