@@ -923,11 +923,15 @@
 
 
 # #encapsulation
-class parent:
-    def __init__(self,name,model,component):
-        self.__name = name 
-        self.__model = model
-        self.__component = component
-        print(self.__name)
+# class parent:
+#     def __init__(self,name,model,component):
+#         self.__name = name 
+#         self.__model = model
+#         self.__component = component
+#         print(self.__name)
 
-v1 = parent("r1","v1","bike component")
+# v1 = parent("r1","v1","bike component")
+
+
+
+# CLASS COMPLETE
