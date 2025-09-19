@@ -856,3 +856,78 @@
 # from practice import hello
 # hello()
 
+
+
+
+# #constructors
+# class self:
+#     def tuhin(self,name,age,):
+#         print(f"my name is {name}, my age is {age}")
+
+# p1 = self()
+# p1.tuhin("tuhin", 20)
+
+# class self:
+#     def __init__(self,name ,age):
+#         print(f"my name is{name}, and my age is {age}")
+
+
+# p1 = self("tuhin", 19)
+
+
+
+
+# #classmethod
+# class self:
+#     def instacnemethod(self):
+#         print("its instace method")
+
+#     @classmethod
+#     def classmethod(hey):
+#         print("its class method")
+
+#     @staticmethod
+#     def staticmethod():
+#         print("and its static method")
+
+
+# v1 = self()
+# v1.instacnemethod()          #instacne method
+# self.classmethod()           #class method 
+# v1.staticmethod()            #static method
+# self.staticmethod()          ##static method
+
+
+
+
+# #polymorphism
+# class vehicle:
+#     def __init__(self,model,brand,component):
+#         self.model = model
+#         self.brand = brand
+#         self.component = component
+
+# class plane(vehicle):
+#     pass 
+
+# class car(vehicle):
+#     pass
+
+# v1 = plane("mustang","brand","component")
+# print(v1.model)
+
+# c1 = car("farary", "mustang", "component")
+# print(c1.model)
+
+
+
+
+# #encapsulation
+class parent:
+    def __init__(self,name,model,component):
+        self.__name = name 
+        self.__model = model
+        self.__component = component
+        print(self.__name)
+
+v1 = parent("r1","v1","bike component")
